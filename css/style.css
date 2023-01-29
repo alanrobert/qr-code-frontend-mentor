@@ -1,24 +1,61 @@
+/* ==================
+        reset
+  =================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+ 
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
 * {
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
-}
-
-h4, p {
-    margin: 0;
-    padding: 0;
-}
+/* ==================
+        card
+  =================== */
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: hsl(219, 100%, 94%);
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .qr-code {
@@ -30,7 +67,7 @@ body {
     width: 320px;
     background-color: white;
     border-radius: 1rem;
-    padding: 1em;
+    padding: 1em 1em 2em 1em;
     text-align: center;
 }
 
@@ -50,9 +87,12 @@ body {
 
 
 .attribution { 
-    font-size: 11px; text-align: center; 
     position: absolute;
-    margin-top: 90vh;
+    left: 50%;
+    margin-left: -130px;
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 3em;
 }
 
 .attribution a { 
